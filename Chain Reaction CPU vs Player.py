@@ -194,7 +194,7 @@ def start():
     gameloop()
 
 def reset_game():
-    global quitGame,quit_menu,turn,end,game_mode,button_over
+    global quitGame,quit_menu,turn,end,game_mode,button_over,bot_moves
     quitGame = False
     quit_menu = False
     turn = 1
