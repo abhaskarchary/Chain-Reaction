@@ -143,12 +143,19 @@ def choose_best(possible_moves):
     maximum = -2
     r = 0
     c = 0
+    minimum = 2
     for (x,i,j,y) in possible_moves:
         if y > maximum:
             r = i
             c = j
             maximum = y
+        if y < minimum:
+            minimum = y
+
+    if minimum == maximum:
+            (x,r,c,maximum) = possible_moves[random.randint(0,len(possible_moves)-1)]
     return (x,r,c,maximum)
+
                 
 def make_move(i, j, t):
     #print("making move..",t)
